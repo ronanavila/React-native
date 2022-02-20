@@ -3,6 +3,7 @@ import { FlatList } from 'react-native';
 import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 import Feather from 'react-native-vector-icons/Feather';
 import {DataListProps} from '.';
+import {BorderlessButton} from 'react-native-gesture-handler';
 
 export const Container = styled.View`
     flex: 1;
@@ -53,10 +54,13 @@ export const UserName = styled.Text`
     font-family: Poppins-Bold;
 `;
 
+export const LogoutButton = styled(BorderlessButton)``;
+
 export const Icon = styled(Feather)`
     font-size: ${RFValue(24)}px;
     color: ${({theme}) => theme.colors.secondary};
 `;
+
 
 export const HighlightCards = styled.ScrollView.attrs({
     horizontal: true,
@@ -83,3 +87,4 @@ export const Title = styled.Text`
 export const TransactionList = styled(FlatList).attrs({
     showsVerticalScrollIndicator: false
 })`` as React.ComponentType as new <DataListProps>() => FlatList<DataListProps>;
+

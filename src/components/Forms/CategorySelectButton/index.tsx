@@ -1,4 +1,5 @@
 import React from "react";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import { 
     Container,
@@ -14,10 +15,12 @@ interface Props{
      title,
     onPress
     }: Props){
-     return(        
+     return(    
+         <GestureHandlerRootView>
          <Container onPress={onPress}>
              <Category>{title}</Category>
              <Icon name="chevron-down"/>
          </Container>
+         </GestureHandlerRootView>    
     )
  }
